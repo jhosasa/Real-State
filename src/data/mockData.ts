@@ -1,0 +1,171 @@
+import { Property, Agent, User } from '../types';
+
+export const mockProperties: Property[] = [
+  {
+    id: '1',
+    title: 'Modern Downtown Apartment',
+    price: 350000,
+    currency: 'USD',
+    type: 'apartment',
+    operation: 'sale',
+    bedrooms: 2,
+    bathrooms: 2,
+    area: 85,
+    address: '123 Main Street, Apt 4B',
+    city: 'New York',
+    zone: 'Manhattan',
+    coordinates: { lat: 40.7589, lng: -73.9851 },
+    images: [
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    description: 'Beautiful modern apartment in the heart of Manhattan with stunning city views.',
+    features: ['Pool', 'Gym', 'Parking', 'Security 24h', 'Elevator'],
+    yearBuilt: 2018,
+    agentId: '1',
+    createdAt: '2024-01-15T10:00:00Z',
+    updatedAt: '2024-01-15T10:00:00Z',
+    featured: true,
+    views: 1245
+  },
+  {
+    id: '2',
+    title: 'Luxury Family House',
+    price: 750000,
+    currency: 'USD',
+    type: 'house',
+    operation: 'sale',
+    bedrooms: 4,
+    bathrooms: 3,
+    area: 200,
+    address: '456 Oak Avenue',
+    city: 'Los Angeles',
+    zone: 'Beverly Hills',
+    coordinates: { lat: 34.0736, lng: -118.4004 },
+    images: [
+      'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/1396119/pexels-photo-1396119.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    description: 'Stunning luxury home with spacious garden and modern amenities.',
+    features: ['Garden', 'Pool', 'Garage', 'Security System', 'Fireplace'],
+    yearBuilt: 2015,
+    agentId: '2',
+    createdAt: '2024-01-10T14:30:00Z',
+    updatedAt: '2024-01-10T14:30:00Z',
+    featured: true,
+    views: 2341
+  },
+  {
+    id: '3',
+    title: 'Cozy Studio Apartment',
+    price: 1800,
+    currency: 'USD',
+    type: 'apartment',
+    operation: 'rent',
+    bedrooms: 1,
+    bathrooms: 1,
+    area: 45,
+    address: '789 Broadway',
+    city: 'New York',
+    zone: 'SoHo',
+    coordinates: { lat: 40.7230, lng: -73.9977 },
+    images: [
+      'https://images.pexels.com/photos/1571467/pexels-photo-1571467.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    description: 'Perfect studio apartment in trendy SoHo, ideal for young professionals.',
+    features: ['Furnished', 'Laundry', 'Pets Allowed', 'Internet Included'],
+    yearBuilt: 2010,
+    agentId: '1',
+    createdAt: '2024-01-12T09:15:00Z',
+    updatedAt: '2024-01-12T09:15:00Z',
+    featured: false,
+    views: 856
+  },
+  {
+    id: '4',
+    title: 'Commercial Office Space',
+    price: 5000,
+    currency: 'USD',
+    type: 'office',
+    operation: 'rent',
+    bedrooms: 0,
+    bathrooms: 2,
+    area: 120,
+    address: '321 Business Plaza',
+    city: 'San Francisco',
+    zone: 'Financial District',
+    coordinates: { lat: 37.7749, lng: -122.4194 },
+    images: [
+      'https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/1170413/pexels-photo-1170413.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    description: 'Modern office space in the heart of the Financial District.',
+    features: ['Conference Room', 'Parking', 'Security 24h', 'Elevator', 'AC'],
+    yearBuilt: 2020,
+    agentId: '3',
+    createdAt: '2024-01-08T16:45:00Z',
+    updatedAt: '2024-01-08T16:45:00Z',
+    featured: false,
+    views: 432
+  }
+];
+
+export const mockAgents: Agent[] = [
+  {
+    id: '1',
+    name: 'Sarah Johnson',
+    email: 'sarah.johnson@realestate.com',
+    phone: '+1 (555) 123-4567',
+    avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150',
+    rating: 4.8,
+    reviewCount: 127,
+    company: 'Premium Properties',
+    verified: true
+  },
+  {
+    id: '2',
+    name: 'Michael Chen',
+    email: 'michael.chen@luxuryrealty.com',
+    phone: '+1 (555) 987-6543',
+    avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150',
+    rating: 4.9,
+    reviewCount: 89,
+    company: 'Luxury Realty Group',
+    verified: true
+  },
+  {
+    id: '3',
+    name: 'Emma Rodriguez',
+    email: 'emma.rodriguez@commercialspaces.com',
+    phone: '+1 (555) 456-7890',
+    avatar: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150',
+    rating: 4.7,
+    reviewCount: 203,
+    company: 'Commercial Spaces Inc.',
+    verified: true
+  }
+];
+
+export const mockUser: User = {
+  id: '1',
+  email: 'john.doe@example.com',
+  name: 'John Doe',
+  avatar: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150',
+  phone: '+1 (555) 111-2222',
+  preferences: {
+    maxPrice: 500000,
+    minPrice: 100000,
+    propertyTypes: ['apartment', 'house'],
+    cities: ['New York', 'Los Angeles'],
+    minBedrooms: 1,
+    maxBedrooms: 3,
+    features: ['Pool', 'Gym', 'Parking']
+  },
+  favorites: ['1', '2'],
+  savedSearches: [],
+  alertsEnabled: true,
+  createdAt: '2024-01-01T00:00:00Z'
+};
