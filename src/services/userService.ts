@@ -3,7 +3,7 @@ import { usersData } from '../data/users';
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-export const userService = {
+class userService = {
   async getCurrentUser(): Promise<User | null> {
     await delay(200);
     const storedUser = localStorage.getItem('currentUser');
@@ -137,4 +137,5 @@ export const userService = {
     return stored ? JSON.parse(stored) : [];
   }
 };
+
 export const userService = new UserService();
