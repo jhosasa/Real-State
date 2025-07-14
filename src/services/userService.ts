@@ -25,7 +25,7 @@ class userService {
     }
     
     return updatedUser;
-  },
+  }
 
   async toggleFavorite(propertyId: string): Promise<string[]> {
     await delay(200);
@@ -45,7 +45,7 @@ class userService {
     this.logActivity(currentUser.id, 'favorite', propertyId);
     
     return favorites;
-  },
+  }
 
   async saveSearch(filters: any): Promise<void> {
     await delay(200);
@@ -54,7 +54,7 @@ class userService {
     
     const savedSearches = [...currentUser.savedSearches, filters];
     await this.updateUser({ savedSearches });
-  },
+  }
 
   async createAlert(alert: Omit<PropertyAlert, 'id' | 'createdAt'>): Promise<PropertyAlert> {
     await delay(300);
@@ -70,13 +70,13 @@ class userService {
     localStorage.setItem('propertyAlerts', JSON.stringify(alerts));
     
     return newAlert;
-  },
+  }
 
   async getUserAlerts(userId: string): Promise<PropertyAlert[]> {
     await delay(200);
     const alerts = this.getStoredAlerts();
     return alerts.filter(alert => alert.userId === userId);
-  },
+  }
 
   async updateAlert(alertId: string, updates: Partial<PropertyAlert>): Promise<PropertyAlert> {
     await delay(200);
@@ -89,14 +89,14 @@ class userService {
     localStorage.setItem('propertyAlerts', JSON.stringify(alerts));
     
     return alerts[alertIndex];
-  },
+  }
 
   async deleteAlert(alertId: string): Promise<void> {
     await delay(200);
     const alerts = this.getStoredAlerts();
     const filteredAlerts = alerts.filter(a => a.id !== alertId);
     localStorage.setItem('propertyAlerts', JSON.stringify(filteredAlerts));
-  },
+  }
 
   logActivity(userId: string, action: UserActivity['action'], propertyId?: string, metadata?: any): void {
     const activities = this.getStoredActivities();
@@ -116,7 +116,7 @@ class userService {
     }
     
     localStorage.setItem('userActivities', JSON.stringify(activities));
-  },
+  }
 
   async getUserActivities(userId: string): Promise<UserActivity[]> {
     await delay(200);
