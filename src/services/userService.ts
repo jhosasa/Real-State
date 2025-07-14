@@ -138,4 +138,4 @@ class userService {
   }
 };
 
-export const userService = new userservice();
+export const userservice = new userservice();
