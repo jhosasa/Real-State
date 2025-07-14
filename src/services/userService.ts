@@ -137,3 +137,5 @@ class userService {
     return stored ? JSON.parse(stored) : [];
   }
 };
+
+export const userService = new userservice();
