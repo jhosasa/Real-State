@@ -8,7 +8,7 @@ class userService {
     await delay(200);
     const storedUser = localStorage.getItem('currentUser');
     return storedUser ? JSON.parse(storedUser) : null;
-  },
+  }
 
   async updateUser(userData: Partial<User>): Promise<User> {
     await delay(300);
