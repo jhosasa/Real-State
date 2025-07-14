@@ -137,4 +137,3 @@ export const userService = {
     return stored ? JSON.parse(stored) : [];
   }
 };
-}
